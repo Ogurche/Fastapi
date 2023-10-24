@@ -1,7 +1,10 @@
-from fastapi import FastAPI 
+from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(
+    title = 'First site'
+)
 
 @app.get('/')
-async def root ():
-    return {"message":"Hello World"}
+async def root():
+    """Root get"""
+    return {"message": "Hello World"}
